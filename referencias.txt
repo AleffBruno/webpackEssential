@@ -1,0 +1,3 @@
+uma forma de testar e colocar um "console.log" em "ex/index.js" apenas para ver se deu tudo certo
+
+foi adicionado um script no package.json para rodar o projeto com npm run dev
