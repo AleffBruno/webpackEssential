@@ -25,5 +25,20 @@ module.exports = {
         //dente eles, o bundle.js e o index.html(que fara referencia para o bundle.js)
         contentBase: path.join(__dirname, 'public'),
         port: 8080
+    },
+    module: {
+        //é um cara que vai carregar os arquivos   
+        loaders: [{
+            //carregue qualquer arquivo javascript
+            test: /.js?$/,
+            //essa dependencia necessita estar no package.json
+            loader: 'babel-loader',
+            //nao leia os arquivos da node_modules
+            exclude: /node_modules/,
+            //oque eu quero que o  meu loader interprete [react,typescript,es2015,n...]
+            query: {
+                presets: ['es2015']
+            }
+        }]
     }
 }
