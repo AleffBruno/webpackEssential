@@ -7,9 +7,17 @@ build {
 }
 
 material usado para estudo {
-    https://webpack.js.org/guides/getting-started/#using-a-configuration
-    https://www.youtube.com/watch?v=HNRt0lODCQM
-    https://webpack.js.org/configuration/dev-server/
+    https://webpack.js.org/guides/getting-started/#using-a-configuration // inicio de tudo
+    https://www.youtube.com/watch?v=HNRt0lODCQM // configurar webpack-dev-server
+    https://webpack.js.org/configuration/dev-server/ // configurar webpack-dev-server
+    https://www.youtube.com/watch?v=8vnkM8JgjpU // webpack.module
+    dica sobre module {
+        existe algumas incompatibilidade com versoes do babel-core,babel-module.
+        Atente-se as versoes caso dê algum erro, as versoes utilizadas no package.json
+        estao compativeis.
+        comando usado para encontrar o erro de incombatibilidade: npx webpack [
+        mostrou um erro falando da incompatibilidade]
+    }
 }
 
 core do babel : babel-core@6.22.1 

@@ -27,18 +27,17 @@ module.exports = {
         port: 8080
     },
     module: {
-        //é um cara que vai carregar os arquivos   
-        loaders: [{
-            //carregue qualquer arquivo javascript
-            test: /.js?$/,
-            //essa dependencia necessita estar no package.json
-            loader: 'babel-loader',
-            //nao leia os arquivos da node_modules
-            exclude: /node_modules/,
-            //oque eu quero que o  meu loader interprete [react,typescript,es2015,n...]
-            query: {
-                presets: ['es2015']
+        rules: [
+            {
+                //carregue qualquer arquivo js   
+                test: /\.js$/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['es2015']
+                    }
+                }]
             }
-        }]
+        ]
     }
 }
