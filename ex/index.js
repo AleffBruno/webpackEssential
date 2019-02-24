@@ -1,1 +1,3 @@
-console.log("a");
+const logger = require('./logger');
+
+logger.info('usando o padrao common JS...');
