@@ -11,6 +11,12 @@ material usado para estudo {
     https://www.youtube.com/watch?v=HNRt0lODCQM // configurar webpack-dev-server
     https://webpack.js.org/configuration/dev-server/ // configurar webpack-dev-server
     https://www.youtube.com/watch?v=8vnkM8JgjpU // webpack.module
+    adicionar plugin rest-spread {
+        >>Foi necessario a criação do arquivo ".babelrc", sei la oque é isso, mas deu pra adicionar
+        o plugin
+        https://www.npmjs.com/package/babel-plugin-transform-object-rest-spread
+    }
+    
     dica sobre module {
         existe algumas incompatibilidade com versoes do babel-core,babel-module.
         Atente-se as versoes caso dê algum erro, as versoes utilizadas no package.json
