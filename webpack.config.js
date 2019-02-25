@@ -1,4 +1,11 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+//veja a documentação para saber mais
+const extractPlugin = new ExtractTextPlugin({
+    //arquivo que seja gerado a partir desse plugin
+    filename: 'main.css'
+})
 
 module.exports = {
     //entry point file
@@ -12,7 +19,9 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
         //generated file
         //arquivo gerado
-        filename: './bundle.js'
+        filename: './bundle.js',
+        // https://webpack.js.org/guides/public-path/
+        publicPath: '/public'
     },
     //webserver what will be used along this exercise
     //exist one called webpack-dev-server, only to dev
@@ -37,7 +46,21 @@ module.exports = {
                         presets: ['es2015']
                     }
                 }]
+            },
+            {
+                test: /\.scss$/,
+                // nao vou definir os loaders no array, porque quero o css em um arquivo separado,
+                // com isso sera necessario um plugin
+                // *veja a documentação para saber mais sobre extract
+                use: extractPlugin.extract({
+                    // *ATENTE-SE A ORDEM DE EXECUÇÃO, DO FIM PARA O COMEÇO
+                    // NO CASO PRIMEIRO SERA EXECUTADO 'sass-loader' DEPOIS 'css-loader'
+                    use: ['css-loader','sass-loader']
+                })
             }
         ]
-    }
+    },
+    plugins: [
+        extractPlugin
+    ]
 }

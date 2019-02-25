@@ -1,3 +1,5 @@
+import './css/main.scss';
+
 const produto = {
     nome: 'Caneta preta',
     preco: 1.90,

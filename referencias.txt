@@ -18,7 +18,7 @@ material usado para estudo {
     }
     
     dica sobre module {
-        existe algumas incompatibilidade com versoes do babel-core,babel-module.
+        existe algumas incompatibilidade com versoes do babel-core,babel-loader.
         Atente-se as versoes caso dê algum erro, as versoes utilizadas no package.json
         estao compativeis.
         comando usado para encontrar o erro de incombatibilidade: npx webpack [
@@ -26,8 +26,15 @@ material usado para estudo {
     }
 }
 
-core do babel : babel-core@6.22.1 
-interface que faz a comunicação webpack com babel : babel-loader@6.2.10 
-trabalha a sintaxe 2015 para fazer a compatibilidade com os browsers : babel-preset-es2015@6.22.0 
+babel-core@6.22.1 : core do babel  
+babel-loader@6.2.10 : interface que faz a comunicação webpack com babel
+babel-preset-es2015@6.22.0 : trabalha a sintaxe 2015 para fazer a compatibilidade com os browsers
+
+sass-loader : tradutor de sass para css
+node-sass : sass-loader necessita disso sei la pq
+css-loader : precisamos disso para manipular o css(no javascript) que sera gerado a partir do scss
+style-loader : [NAO UTILIZADO, ver depois oque é]
+extract-text-webpack-plugin : pega todo o css compilado e coloca isso em um arquivo
+(com isso podemos importar o css sem depender do JS)
 
 
