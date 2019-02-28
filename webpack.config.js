@@ -12,7 +12,7 @@ module.exports = {
         path: __dirname + '/public'
     },
     devServer: {
-        contentBase: '/public',
+        contentBase: './public',
         port: 9000
     },
     optimization: {
