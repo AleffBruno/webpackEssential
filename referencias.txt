@@ -1,0 +1,2 @@
+arrumando o erro TypeError: Cannot read property 'properties' of undefined 
+    link: https://github.com/plotly/dash-component-boilerplate/issues/12

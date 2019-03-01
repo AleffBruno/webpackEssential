@@ -31,6 +31,14 @@ module.exports = {
     ],
     module: {
         rules: [{
+            test: /\.js$/,
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: ['es2015']
+                }
+            }]
+        },{
             test: /\.s?[ac]ss$/,
             use: [
                 MiniCssExtractPlugin.loader, //esse plugin conflita com 'style-loader'
